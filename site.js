@@ -222,6 +222,7 @@ function updateDrinkFcn() {
 
   const d1 = document.createElement("div");
   d1.className = "row";
+  d1.id = "drink1";
   const d2 = document.createElement("div");
   d2.className = "row";
   d2.id = "drink2";
