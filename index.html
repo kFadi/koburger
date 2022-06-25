@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+
+  <!-- TITLE -->
+  <title>KoBurger</title>
+
+  <!-- Icon Support -->
+  <link rel="icon" href="/assets/icon32.png" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- JS -->
+  <script src="site.js"></script>
+
+</head>
+
+<body onload="btnResetFcn();">
+  <div id="root" class="col">
+    <!-- ########################################################################################  -->
+    <!-- ########################################################################################  -->
+    <div id="header" class="row">
+      <div id="kosher" class="col">
+        <label class="switch" for="check-kosher">
+          <input type="checkbox" id="check-kosher" onchange="checkKosherFcn()">
+          <span class="slider round"></span>
+        </label>Kosher
+      </div>
+      <div id="logo">
+        <img src="" alt="" id="logo-img" />
+      </div>
+    </div>
+    <!-- ########################################################################################  -->
+    <!-- ########################################################################################  -->
+    <div id="main" class="row">
+      <!-- /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ -->
+      <!-- /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ -->
+      <div id="side" class="col">
+        <!-- @_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@ -->
+        <!-- @_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@ -->
+        <div id="config" class="col">
+          <!-- ||||||||||||||||||||||||||||||||||||||| -->
+          <!-- ||||||||||||||||||||||||||||||||||||||| -->
+          <fieldset id="addons" class="col">
+            <legend>addons</legend>
+            <div id="cheese-kosher" class="row" class="display-no">
+              <img src="/assets/kosher.png" alt="K O S H E R" />
+            </div>
+            <div id="cheese-cheese" class="row" class="display-yes">
+              <button id="btn-cheese-remove" onClick="cheeseRemoveFcn()">&#10134;</button>
+              <span id="tt-cheese"> Cheese </span>
+              <button id="btn-cheese-add" onClick="cheeseAddFcn()">&#10133;</button>
+            </div>
+            <div id="sauce" class="row">
+              <button id="btn-sauce-remove" onClick="sauceRemoveFcn()">&#10134;</button>
+              <span id="tt-sauce"> Sauce </span>
+              <button id="btn-sauce-add" onClick="sauceAddFcn()">&#10133;</button>
+            </div>
+            <div id="onion" class="row">
+              <button id="btn-onion-remove" onClick="onionRemoveFcn()">&#10134;</button>
+              <span id="tt-onion"> Onion </span>
+              <button id="btn-onion-add" onClick="onionAddFcn()">&#10133;</button>
+            </div>
+            <div id="lettuce" class="row">
+              <button id="btn-lettuce-remove" onClick="lettuceRemoveFcn()">&#10134;</button>
+              <span id="tt-lettuce"> Lettuce </span>
+              <button id="btn-lettuce-add" onClick="lettuceAddFcn()">&#10133;</button>
+            </div>
+            <div id="tomato" class="row">
+              <button id="btn-tomato-remove" onClick="tomatoRemoveFcn()">&#10134;</button>
+              <span id="tt-tomato"> Tomato </span>
+              <button id="btn-tomato-add" onClick="tomatoAddFcn()">&#10133;</button>
+            </div>
+          </fieldset>
+          <!-- ||||||||||||||||||||||||||||||||||||||| -->
+          <!-- ||||||||||||||||||||||||||||||||||||||| -->
+          <fieldset id="burger" class="row">
+            <legend>burger</legend>
+            <select id="select-burger" onchange="updateBurgerFcn()">
+              <option>Beef</option>
+              <option>Chicken</option>
+              <option>Veggie</option>
+            </select>
+            <label for="check-double" id="t-double-burger" class="checkbox">
+              <input type="checkbox" id="check-double" onchange="updateDoubleBurgerFcn()" />
+              double
+            </label>
+          </fieldset>
+          <!-- ||||||||||||||||||||||||||||||||||||||| -->
+          <!-- ||||||||||||||||||||||||||||||||||||||| -->
+          <fieldset id="extras" class="row">
+            <legend>extras</legend>
+            <label for="check-healthy" id="t-healthy-bun" class="checkbox">
+              <input type="checkbox" id="check-healthy" onchange="checkHealthyFcn()" />
+              Healthy Bun</label>
+            <label for="check-fries" id="t-size-fries" class="checkbox">
+              <input type="checkbox" id="check-fries" onchange="checkFriesFcn()" />
+              size+ Fries</label>
+          </fieldset>
+          <!-- ||||||||||||||||||||||||||||||||||||||| -->
+          <!-- ||||||||||||||||||||||||||||||||||||||| -->
+          <fieldset id="drink" class="row">
+            <legend>drink</legend>
+            <select id="select-drink" onchange="updateDrinkFcn()">
+              <option>Cola</option>
+              <option>Fanta</option>
+              <option>Sprite</option>
+            </select>
+            <label for="check-zero" class="checkbox">
+              <input type="checkbox" id="check-zero" onchange="updateDrinkFcn()" />
+              ZERO</label>
+            <label for="check-drink-size" id="t-size-drink" class="checkbox">
+              <input type="checkbox" id="check-drink-size" onchange="updateDrinkSizeFcn()" />
+              size+</label>
+          </fieldset>
+          <!-- ||||||||||||||||||||||||||||||||||||||| -->
+          <!-- ||||||||||||||||||||||||||||||||||||||| -->
+          <div id="reset">
+            <button id="btn-reset" onclick="btnResetFcn()">
+              R E S E T
+            </button>
+          </div>
+        </div>
+        <!-- @_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@ -->
+        <!-- @_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@ -->
+        <div id="total" class="col">
+          <div id="total-tag">
+            <img src="/assets/price/tag.png" alt="PRICE TAG" id="total-tag-img">
+            <div id="total-tag-price" class="row"></div>
+          </div>
+          <img src="/assets/price/money.png" alt="MONEY" id="total-money-img">
+        </div>
+      </div>
+      <!-- /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ -->
+      <!-- /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ -->
+      <div id="meal" class="col">
+        <div id="meal-upper-bun" class="col"></div>
+        <div id="meal-cheese" class="col"></div>
+        <div id="meal-sauce" class="col"></div>
+        <div id="meal-onion" class="col"></div>
+        <div id="meal-lettuce" class="col"></div>
+        <div id="meal-tomato" class="col"></div>
+        <div id="meal-burger" class="col"></div>
+        <div id="meal-lower-bun" class="col"></div>
+      </div>
+      <!-- /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ -->
+      <!-- /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ -->
+      <div id="next-to" class="col">
+        <div id="next-to-fries" class="row"></div>
+        <div id="next-to-drink" class="col"></div>
+      </div>
+    </div>
+    <!-- ########################################################################################  -->
+    <!-- ########################################################################################  -->
+    <div id="footer" class="col">
+      <u>All Rights Reserved &copy;</u><span>
+        F&nbsp;&nbsp;a&nbsp;&nbsp;d&nbsp;&nbsp;i&nbsp;&nbsp;@&nbsp;&nbsp;2&nbsp;&nbsp;0&nbsp;&nbsp;2&nbsp;&nbsp;2</span>
+    </div>
+    <!-- ########################################################################################  -->
+    <!-- ########################################################################################  -->
+  </div>
+</body>
+
+</html>
