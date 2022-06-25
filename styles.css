@@ -23,6 +23,7 @@ html, body, #root {
 /****************************************/
 /****************************************/
 /****************************************/
+/****************************************/
 
 #header {
     width: 100%;
@@ -44,24 +45,33 @@ html, body, #root {
 
 /****************************************/
 
+#footer u {
+    text-underline-offset: 6px;
+}
+
+/****************************************/
+
 #kosher {
     width: 30%;
-    gap: 10px;
+    gap: 5px;
 }
+
+/* kosher switch last in css */
 
 #logo {
     width: 70%;
 }
 
 #logo img {
-    max-width: 95%;
+    max-width: 88%;
 }
 
 /****************************************/
 
-#side {
+#config {
     width: 30%;
     height: 100%;
+    background-color: #fcdc5d;
 }
 
 #meal {
@@ -73,32 +83,68 @@ html, body, #root {
 #next-to {
     width: 30%;
     height: 100%;
+    background-color: #d0d6b5;
+    gap: 30px
 }
 
 /****************************************/
 
-#config {
-    width: 100%;
-    height: 85%;
-    background-color: #fcdc5d;
-    /* justify-content: flex-start; */
+#meal, #meal div {
+    margin: 0px auto;
+    padding: 0 auto;
+    gap: 2px;
 }
 
-#total {
+#meal img {
+    width: 36%;
+    align-items: center;
+}
+
+/****************************************/
+
+#next-to-fries, #next-to-drink {
     width: 100%;
-    height: 15%;
-    background-color: #fcdc5d;
+}
+
+#fries-im {
+    max-width: 30%;
+}
+
+#fries-im-size {
+    max-width: 50%;
+}
+
+#drink1, #drink2 {
+    width: 70%;
+}
+
+.drink-1-img {
+    width: 44%;
+}
+
+.drink-2-img {
+    width: 22%;
+    margin: 5px;
+}
+
+/****************************************/
+/****************************************/
+/****************************************/
+/****************************************/
+
+#total {
+    margin-bottom: 10px;
+    width: 100%;
     /* -------------- */
     position: relative;
     text-align: center;
-    /* color: white; */
     color: #082032;
 }
 
 #total-tag-price {
-    font-size:x-large;
+    font-size: x-large;
     font-weight: 900;
-    /* ----- */
+    /* -------------- */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -112,24 +158,18 @@ html, body, #root {
 
 /****************************************/
 
-#next-to-fries {
-    width: 100%;
-    height: 60%;
-    background-color: #d0d6b5;
+#reset {
+    margin-top: 20px;
 }
 
-#next-to-drink {
-    width: 100%;
-    height: 40%;
-    background-color: #d0d6b5;
+#reset button {
+    padding-inline: 40px;
 }
 
 /****************************************/
-/****************************************/
-
 
 legend {
-    color: rgb(127, 127, 127);
+    color: rgb(61, 161, 161);
 }
 
 fieldset {
@@ -153,63 +193,15 @@ fieldset {
     display: none;
 }
 
-/****************************************/
-
 #cheese-cheese, #sauce, #onion, #lettuce, #tomato {
     width: 60%;
     justify-content: space-between;
     justify-content: space-around;
 }
 
-#reset {
-    margin-top: 30px;
-}
-
-#reset button {
-    padding-inline: 40px;
-}
-
 /****************************************/
-
-#meal, #meal div {
-    margin: 0px auto;
-    padding: 0 auto;
-    gap: 2px;
-}
-
-#meal img {
-    width: 36%;
-    align-items: center;
-    justify-content: center;
-}
-
-#fries-im {
-    max-width: 30%;
-}
-
-#fries-im-size {
-    max-width: 50%;
-}
-
-
-#drink1, #drink2 {
-    width:70%;
-}
-
-.drink-1-img {
-    width: 44%;
-}
-.drink-2-img {
-    width: 22%;
-    margin: 5px;
-}
-
 /****************************************/
-
-#footer u {
-    text-underline-offset: 6px;
-}
-
+/****************************************/
 /****************************************/
 
 .checkbox {
