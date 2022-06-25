@@ -232,49 +232,59 @@ function updateDrinkFcn() {
   if (idx == 0) {
     img.src = "/assets/drink/cola.png";
     img.alt = "COLA";
+    img.className="drink-1-img";
     d1.appendChild(img);
     if (isZero) {
       img = document.createElement("img");
       img.src = "/assets/drink/cola_zero.png";
       img.alt = "COLA ZERO";
+      img.className="drink-2-img";
       d2.appendChild(img);
     }
     if (isSize) {
       img = document.createElement("img");
       img.src = "/assets/drink/cola_size.png";
       img.alt = "COLA SIZE";
+      img.className="drink-2-img";
       d2.appendChild(img);
     }
   } else if (idx == 1) {
     img.src = "/assets/drink/fanta.png";
     img.alt = "FANTA";
+    img.className="drink-1-img";
     d1.appendChild(img);
     if (isZero) {
       img = document.createElement("img");
       img.src = "/assets/drink/fanta_zero.png";
       img.alt = "FANTA ZERO";
+      img.className="drink-2-img";
       d2.appendChild(img);
     }
     if (isSize) {
       img = document.createElement("img");
       img.src = "/assets/drink/fanta_size.png";
       img.alt = "FANTA SIZE";
+      img.className="drink-2-img";
       d2.appendChild(img);
     }
   } else {
     img.src = "/assets/drink/sprite.png";
-    img.alt = "COLA";
+    img.alt = "SPRITE";
+    img.className="drink-1-img";
+
     d1.appendChild(img);
     if (isZero) {
       img = document.createElement("img");
       img.src = "/assets/drink/sprite_zero.png";
       img.alt = "SPRITE ZERO";
+      img.className="drink-2-img";
       d2.appendChild(img);
     }
     if (isSize) {
       img = document.createElement("img");
       img.src = "/assets/drink/sprite_size.png";
       img.alt = "SPRITE SIZE";
+      img.className="drink-2-img";
       d2.appendChild(img);
     }
   }
