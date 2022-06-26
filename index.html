@@ -30,9 +30,33 @@
           <span class="slider round"></span>
         </label>Kosher
       </div>
-      <div id="logo">
-        <img src="" alt="" id="logo-img" />
+
+      <div id="logo-and-colors" class="row">
+        <div id="logo" class="row">
+          <img src="" alt="" id="logo-img" />
+        </div>
+        <div id="colors" class="col">
+          <span>🌈 colors</span>
+          <div class="row">
+            <fieldset class="col">
+              <input type="radio" name="clr-config" id="clr-config-1" onchange="colorConfigFcn()">
+              <input type="radio" name="clr-config" id="clr-config-2" onchange="colorConfigFcn()">
+              <input type="radio" name="clr-config" id="clr-config-3" onchange="colorConfigFcn()">
+            </fieldset>
+            <fieldset class="col">
+              <input type="radio" name="clr-meal" id="clr-meal-1" onchange="colorMealFcn()">
+              <input type="radio" name="clr-meal" id="clr-meal-2" onchange="colorMealFcn()">
+              <input type="radio" name="clr-meal" id="clr-meal-3" onchange="colorMealFcn()">
+            </fieldset>
+            <fieldset class="col">
+              <input type="radio" name="clr-next-to" id="clr-next-to-1" onchange="colorNextToFcn()">
+              <input type="radio" name="clr-next-to" id="clr-next-to-2" onchange="colorNextToFcn()">
+              <input type="radio" name="clr-next-to" id="clr-next-to-3" onchange="colorNextToFcn()">
+            </fieldset>
+          </div>
+        </div>
       </div>
+
     </div>
     <!-- ########################################################################################  -->
     <!-- ########################################################################################  -->
@@ -122,9 +146,12 @@
         </fieldset>
         <!-- ||||||||||||||||||||||||||||||||||||||| -->
         <!-- ||||||||||||||||||||||||||||||||||||||| -->
-        <div id="reset">
+        <div id="reset-submit" class="row">
           <button id="btn-reset" onclick="btnResetFcn()">
             R E S E T
+          </button>
+          <button id="btn-submit" onclick="btnSubmitFcn()">
+            S U B M I T
           </button>
         </div>
       </div>

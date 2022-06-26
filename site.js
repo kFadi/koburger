@@ -23,6 +23,11 @@ let cnt5 = 0;
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 
+function btnSubmitFcn() {
+  alert("an eXtraordinary KoBurger 🍔 is on the way to your stomach 🤣 ");
+  btnResetFcn();
+}
+
 function btnResetFcn() {
   document.getElementById("check-kosher").checked = false;
 
@@ -36,11 +41,18 @@ function btnResetFcn() {
     onionRemoveFcn();
   }
   while (cnt4 > 0) {
-    lettuceRemoveFcn();    
+    lettuceRemoveFcn();
   }
   while (cnt5 > 0) {
     tomatoRemoveFcn();
   }
+
+  document.getElementById("clr-config-2").checked = true;
+  document.getElementById("clr-meal-3").checked = true;
+  document.getElementById("clr-next-to-1").checked = true;
+  colorConfigFcn();
+  colorMealFcn();
+  colorNextToFcn();
 
   document.getElementById("btn-cheese-remove").disabled = true;
   document.getElementById("btn-sauce-remove").disabled = true;
@@ -63,8 +75,10 @@ function btnResetFcn() {
   document.getElementById("tt-onion").title = price3 + " \u20AA";
   document.getElementById("tt-lettuce").title = price4 + " \u20AA";
   document.getElementById("tt-tomato").title = price5 + " \u20AA";
-  document.getElementById("t-double-burger").title = price_double_burger + " \u20AA";
-  document.getElementById("t-healthy-bun").title = price_healthy_bun + " \u20AA";
+  document.getElementById("t-double-burger").title =
+    price_double_burger + " \u20AA";
+  document.getElementById("t-healthy-bun").title =
+    price_healthy_bun + " \u20AA";
   document.getElementById("t-size-fries").title = price_size_fries + " \u20AA";
   document.getElementById("t-size-drink").title = price_size_drink + " \u20AA";
 
@@ -105,10 +119,14 @@ function checkKosherFcn() {
     logo_img.src = "/assets/logo72.png";
     logo_img.alt = "KOBURGER LOGO";
   }
-   
-  document.getElementById("cheese-kosher").className=isKosher? "display-yes" : "display-no";
-  document.getElementById("cheese-cheese").className=isKosher? "display-no" : "display-yes";
-  
+
+  document.getElementById("cheese-kosher").className = isKosher
+    ? "display-yes"
+    : "display-no";
+  document.getElementById("cheese-cheese").className = isKosher
+    ? "display-no"
+    : "display-yes";
+
   document.getElementById("btn-reset").disabled = false;
 }
 
@@ -190,11 +208,11 @@ function checkFriesFcn() {
   const checked = document.getElementById("check-fries").checked;
   total_price += checked ? price_size_fries : -1 * price_size_fries;
   update_price();
- 
+
   const controller = document.getElementById("next-to-fries");
   controller.innerHTML = "";
   const img = document.createElement("img");
- 
+
   if (checked) {
     img.src = "/assets/fries/fries_size.png";
     img.alt = "FRIES SIZE";
@@ -232,59 +250,59 @@ function updateDrinkFcn() {
   if (idx == 0) {
     img.src = "/assets/drink/cola.png";
     img.alt = "COLA";
-    img.className="drink-1-img";
+    img.className = "drink-1-img";
     d1.appendChild(img);
     if (isZero) {
       img = document.createElement("img");
       img.src = "/assets/drink/cola_zero.png";
       img.alt = "COLA ZERO";
-      img.className="drink-2-img";
+      img.className = "drink-2-img";
       d2.appendChild(img);
     }
     if (isSize) {
       img = document.createElement("img");
       img.src = "/assets/drink/cola_size.png";
       img.alt = "COLA SIZE";
-      img.className="drink-2-img";
+      img.className = "drink-2-img";
       d2.appendChild(img);
     }
   } else if (idx == 1) {
     img.src = "/assets/drink/fanta.png";
     img.alt = "FANTA";
-    img.className="drink-1-img";
+    img.className = "drink-1-img";
     d1.appendChild(img);
     if (isZero) {
       img = document.createElement("img");
       img.src = "/assets/drink/fanta_zero.png";
       img.alt = "FANTA ZERO";
-      img.className="drink-2-img";
+      img.className = "drink-2-img";
       d2.appendChild(img);
     }
     if (isSize) {
       img = document.createElement("img");
       img.src = "/assets/drink/fanta_size.png";
       img.alt = "FANTA SIZE";
-      img.className="drink-2-img";
+      img.className = "drink-2-img";
       d2.appendChild(img);
     }
   } else {
     img.src = "/assets/drink/sprite.png";
     img.alt = "SPRITE";
-    img.className="drink-1-img";
+    img.className = "drink-1-img";
 
     d1.appendChild(img);
     if (isZero) {
       img = document.createElement("img");
       img.src = "/assets/drink/sprite_zero.png";
       img.alt = "SPRITE ZERO";
-      img.className="drink-2-img";
+      img.className = "drink-2-img";
       d2.appendChild(img);
     }
     if (isSize) {
       img = document.createElement("img");
       img.src = "/assets/drink/sprite_size.png";
       img.alt = "SPRITE SIZE";
-      img.className="drink-2-img";
+      img.className = "drink-2-img";
       d2.appendChild(img);
     }
   }
@@ -336,18 +354,18 @@ function add(i) {
       total_price += price2;
       break;
 
-      case 3:
-        img.id = "d3-" + ++cnt3;
-        img.src = "/assets/meal/onion.png";
-        img.alt = "ONION";
-        container = document.getElementById("meal-onion");
-        if (cnt3 == max_addons) {
-          document.getElementById("btn-onion-add").disabled = true;
-        } else if (cnt3 == 1) {
-          document.getElementById("btn-onion-remove").disabled = false;
-        }
-        total_price += price3;
-        break;
+    case 3:
+      img.id = "d3-" + ++cnt3;
+      img.src = "/assets/meal/onion.png";
+      img.alt = "ONION";
+      container = document.getElementById("meal-onion");
+      if (cnt3 == max_addons) {
+        document.getElementById("btn-onion-add").disabled = true;
+      } else if (cnt3 == 1) {
+        document.getElementById("btn-onion-remove").disabled = false;
+      }
+      total_price += price3;
+      break;
 
     case 4:
       img.id = "d4-" + ++cnt4;
@@ -417,20 +435,20 @@ function rem(i) {
       }
       break;
 
-      case 3:
-        child = document.getElementById("d3-" + cnt3);
-        container = document.getElementById("meal-onion");
-        container.removeChild(child);
-        cnt3--;
-        total_price -= price3;
-        if (cnt3 == max_addons - 1) {
-          document.getElementById("btn-onion-add").disabled = false;
-        } else if (cnt3 == 0) {
-          document.getElementById("btn-onion-remove").disabled = true;
-        }
-        break;
-    
-      case 4:
+    case 3:
+      child = document.getElementById("d3-" + cnt3);
+      container = document.getElementById("meal-onion");
+      container.removeChild(child);
+      cnt3--;
+      total_price -= price3;
+      if (cnt3 == max_addons - 1) {
+        document.getElementById("btn-onion-add").disabled = false;
+      } else if (cnt3 == 0) {
+        document.getElementById("btn-onion-remove").disabled = true;
+      }
+      break;
+
+    case 4:
       child = document.getElementById("d4-" + cnt4);
       container = document.getElementById("meal-lettuce");
       container.removeChild(child);
@@ -497,6 +515,37 @@ function lettuceRemoveFcn() {
 }
 function tomatoRemoveFcn() {
   rem(5);
+}
+
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+
+function colorConfigFcn() {
+  const idx = document.getElementById("clr-config-1").checked
+    ? 1
+    : document.getElementById("clr-config-2").checked
+    ? 2
+    : 3;
+  const cls = "col bg" + idx + (idx === 3 ? "a" : "");
+  document.getElementById("config").className = cls;
+}
+
+function colorMealFcn() {
+  const idx = document.getElementById("clr-meal-1").checked
+  ? 1
+  : document.getElementById("clr-meal-2").checked
+  ? 2
+  : 3;
+document.getElementById("meal").className = "col bg" + idx;
+}
+
+function colorNextToFcn() {
+  const idx = document.getElementById("clr-next-to-1").checked
+  ? 1
+  : document.getElementById("clr-next-to-2").checked
+  ? 2
+  : 3;
+document.getElementById("next-to").className = "col bg" + idx;
 }
 
 //////////////////////////////////////////////
