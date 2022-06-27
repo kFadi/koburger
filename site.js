@@ -1,4 +1,4 @@
-const app_ver = "App Version 3.0";
+const app_ver = "App Version 3.1";
 const max_addons = 3;
 const initial_price = 42;
 
@@ -216,8 +216,6 @@ function checkFriesSizeFcn() {
   update_price();
 
   const img = document.createElement("img");
-  img.id = "fries-img";
-  img.className = "size-" + (checked ? "plus" : "reg");
 
   if (checked) {
     img.src = "/assets/fries/fries_size.png";
@@ -255,8 +253,6 @@ function updateDrinkFcn() {
   drnk += isSize ? "s" : "";
 
   const img = document.createElement("img");
-  img.id = "drink-img";
-  img.className = "size-" + (isSize ? "plus" : "reg");
 
   switch (drnk) {
     case "c":
