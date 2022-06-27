@@ -56,14 +56,14 @@ html, body, #root {
 /****************************************/
 
 #kosher {
-    width: 30%;
+    width: 33%;
     gap: 5px;
 }
 
 /* kosher switch last in css */
 
 #logo-and-colors {
-    width: 70%;
+    width: 67%;
     gap: 5px;
 }
 
