@@ -125,7 +125,7 @@
             <input type="checkbox" id="check-healthy" onchange="checkHealthyFcn()" />
             Healthy Bun</label>
           <label for="check-fries" id="t-size-fries" class="checkbox">
-            <input type="checkbox" id="check-fries" onchange="checkFriesFcn()" />
+            <input type="checkbox" id="check-fries" onchange="checkFriesSizeFcn()" />
             size+ Fries</label>
         </fieldset>
         <!-- ||||||||||||||||||||||||||||||||||||||| -->
@@ -141,7 +141,7 @@
             <input type="checkbox" id="check-zero" onchange="updateDrinkFcn()" />
             ZERO</label>
           <label for="check-drink-size" id="t-size-drink" class="checkbox">
-            <input type="checkbox" id="check-drink-size" onchange="updateDrinkSizeFcn()" />
+            <input type="checkbox" id="check-drink-size" onchange="checkDrinkSizeFcn()" />
             size+</label>
         </fieldset>
         <!-- ||||||||||||||||||||||||||||||||||||||| -->
@@ -169,9 +169,12 @@
       </div>
       <!-- /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ -->
       <!-- /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ -->
-      <div id="next-to" class="col">
-        <div id="next-to-fries" class="row"></div>
-        <div id="next-to-drink" class="col"></div>
+      <div id="next-to">
+        <!-- next-to class is determined in colors -->
+        <div id="next-to-in" class="row">
+          <div id="next-to-fries" class="row"></div>
+          <div id="next-to-drink" class="row"></div>
+        </div>
       </div>
     </div>
     <!-- ########################################################################################  -->
