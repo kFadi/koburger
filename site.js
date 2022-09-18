@@ -115,10 +115,10 @@ function checkKosherFcn() {
     while (cnt1 > 0) {
       cheeseRemoveFcn();
     }
-    logo_img.src = "/assets/logo72kosher.png";
+    logo_img.src = "./assets/logo72kosher.png";
     logo_img.alt = "KOBURGER KOSHER LOGO";
   } else {
-    logo_img.src = "/assets/logo72.png";
+    logo_img.src = "./assets/logo72.png";
     logo_img.alt = "KOBURGER LOGO";
   }
 
@@ -138,13 +138,13 @@ function checkKosherFcn() {
 function createBurger(idx) {
   const img = document.createElement("img");
   if (idx === 0) {
-    img.src = "/assets/meal/burger_beef.png";
+    img.src = "./assets/meal/burger_beef.png";
     img.alt = "BEEF BURGER";
   } else if (idx === 1) {
-    img.src = "/assets/meal/burger_chicken.png";
+    img.src = "./assets/meal/burger_chicken.png";
     img.alt = "CHICKEN BURGER";
   } else {
-    img.src = "/assets/meal/burger_veggie.png";
+    img.src = "./assets/meal/burger_veggie.png";
     img.alt = "VEGGIE BURGER";
   }
   return img;
@@ -181,10 +181,10 @@ function checkHealthyFcn() {
 
   let img = document.createElement("img");
   if (checked) {
-    img.src = "/assets/meal/bun_upper_healthy.png";
+    img.src = "./assets/meal/bun_upper_healthy.png";
     img.alt = "HEALTHY UPPER BUN";
   } else {
-    img.src = "/assets/meal/bun_upper.png";
+    img.src = "./assets/meal/bun_upper.png";
     img.alt = "UPPER BUN";
   }
   let controller = document.getElementById("meal-upper-bun");
@@ -193,10 +193,10 @@ function checkHealthyFcn() {
 
   img = document.createElement("img");
   if (checked) {
-    img.src = "/assets/meal/bun_lower_healthy.png";
+    img.src = "./assets/meal/bun_lower_healthy.png";
     img.alt = "HEALTHY LOWER BUN";
   } else {
-    img.src = "/assets/meal/bun_lower.png";
+    img.src = "./assets/meal/bun_lower.png";
     img.alt = "LOWER BUN";
   }
   controller = document.getElementById("meal-lower-bun");
@@ -218,10 +218,10 @@ function checkFriesSizeFcn() {
   const img = document.createElement("img");
 
   if (checked) {
-    img.src = "/assets/fries/fries_size.png";
+    img.src = "./assets/fries/fries_size.png";
     img.alt = "FRIES SIZE";
   } else {
-    img.src = "/assets/fries/fries.png";
+    img.src = "./assets/fries/fries.png";
     img.alt = "FRIES";
   }
 
@@ -256,51 +256,51 @@ function updateDrinkFcn() {
 
   switch (drnk) {
     case "c":
-      img.src = "/assets/drink/cola.png";
+      img.src = "./assets/drink/cola.png";
       img.alt = "COLA";
       break;
     case "cz":
-      img.src = "/assets/drink/cola_zero.png";
+      img.src = "./assets/drink/cola_zero.png";
       img.alt = "COLA ZERO";
       break;
     case "cs":
-      img.src = "/assets/drink/cola_size.png";
+      img.src = "./assets/drink/cola_size.png";
       img.alt = "COLA SIZE";
       break;
     case "czs":
-      img.src = "/assets/drink/cola_zero_size.png";
+      img.src = "./assets/drink/cola_zero_size.png";
       img.alt = "COLA ZERO SIZE";
       break;
     case "f":
-      img.src = "/assets/drink/fanta.png";
+      img.src = "./assets/drink/fanta.png";
       img.alt = "FANTA";
       break;
     case "fz":
-      img.src = "/assets/drink/fanta_zero.png";
+      img.src = "./assets/drink/fanta_zero.png";
       img.alt = "FANTA ZERO";
       break;
     case "fs":
-      img.src = "/assets/drink/fanta_size.png";
+      img.src = "./assets/drink/fanta_size.png";
       img.alt = "FANTA SIZE";
       break;
     case "fzs":
-      img.src = "/assets/drink/fanta_zero_size.png";
+      img.src = "./assets/drink/fanta_zero_size.png";
       img.alt = "FANTA ZERO SIZE";
       break;
     case "s":
-      img.src = "/assets/drink/sprite.png";
+      img.src = "./assets/drink/sprite.png";
       img.alt = "SPRITE";
       break;
     case "sz":
-      img.src = "/assets/drink/sprite_zero.png";
+      img.src = "./assets/drink/sprite_zero.png";
       img.alt = "SPRITE ZERO";
       break;
     case "ss":
-      img.src = "/assets/drink/sprite_size.png";
+      img.src = "./assets/drink/sprite_size.png";
       img.alt = "SPRITE SIZE";
       break;
     case "szs":
-      img.src = "/assets/drink/sprite_zero_size.png";
+      img.src = "./assets/drink/sprite_zero_size.png";
       img.alt = "SPRITE ZERO SIZE";
       break;
     default:
@@ -324,7 +324,7 @@ function add(i) {
   switch (i) {
     case 1:
       img.id = "d1-" + ++cnt1;
-      img.src = "/assets/meal/cheese.png";
+      img.src = "./assets/meal/cheese.png";
       img.alt = "CHEESE";
       container = document.getElementById("meal-cheese");
       if (cnt1 === max_addons) {
@@ -337,7 +337,7 @@ function add(i) {
 
     case 2:
       img.id = "d2-" + ++cnt2;
-      img.src = "/assets/meal/sauce.png";
+      img.src = "./assets/meal/sauce.png";
       img.alt = "SAUCE";
       container = document.getElementById("meal-sauce");
       if (cnt2 === max_addons) {
@@ -350,7 +350,7 @@ function add(i) {
 
     case 3:
       img.id = "d3-" + ++cnt3;
-      img.src = "/assets/meal/onion.png";
+      img.src = "./assets/meal/onion.png";
       img.alt = "ONION";
       container = document.getElementById("meal-onion");
       if (cnt3 === max_addons) {
@@ -363,7 +363,7 @@ function add(i) {
 
     case 4:
       img.id = "d4-" + ++cnt4;
-      img.src = "/assets/meal/lettuce.png";
+      img.src = "./assets/meal/lettuce.png";
       img.alt = "LETTUCE";
       container = document.getElementById("meal-lettuce");
       if (cnt4 === max_addons) {
@@ -376,7 +376,7 @@ function add(i) {
 
     case 5:
       img.id = "d5-" + ++cnt5;
-      img.src = "/assets/meal/tomato.png";
+      img.src = "./assets/meal/tomato.png";
       img.alt = "TOMATO";
       container = document.getElementById("meal-tomato");
       if (cnt5 === max_addons) {
